@@ -1,0 +1,35 @@
+#context-menu {
+    position:fixed;
+    z-index:10000;
+    width:150px;
+    background:#1b1a1a;
+    border-radius:5px;
+    transform:scale(0);
+    transform-origin:top left;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu.active {
+    transform:scale(1);
+    transition:transform 300ms ease-in-out;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu .item {
+    padding:8px 10px;
+    font-size:15px;
+    color:#eee;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu .item:hover {
+    background:#555;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu .item i {
+    display:inline-block;
+    margin-right:5px;
+    font-family:"Open Sans",sans-serif;
+  }
+  #context-menu hr {
+    margin:2px 0px;
+    border-color:#555;
+    font-family:"Open Sans",sans-serif;
+  }
