@@ -1,0 +1,92 @@
+/*MDAScripts CSS*/
+/*
+  default.css
+  Directory: DiskName/mda_assets/default.css
+  Package: AllPackages
+  DevComments: Hair, Nose and... OH THE FRICKING FACE I forgot to add it. Now it's ugly.
+*/
+body {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .clickable{
+      cursor: pointer;
+  }
+  .loading{
+      cursor: progress;
+  }
+  .bruh{
+      cursor: url(./092b071c3b3141a58787415450c27857.png) 50 50, default;
+  }
+  /*Code Copied and Remixed By MDAScripts and Mr Discord/Discreet Animation*/
+  #plain {
+      position: fixed;
+      z-index: 10000;
+      width: 150px;
+      background: #1b1a1a;
+      border-radius: 5px;
+      transform: scale(0);
+      transform-origin: top left;
+    }
+  
+    #plain.visible {
+      transform: scale(1);
+      transition: transform 200ms ease-in-out;
+    }
+  
+    #plain .op {
+      padding: 8px 10px;
+      font-size: 15px;
+      color: #eee;
+      cursor: pointer;
+      border-radius: inherit;
+    }
+  
+    #plain .op:hover {
+      background: #343434;
+    }
+  /*Modal Code:*/
+  .thinkmodal {font-family: Arial, Helvetica, sans-serif;}
+  
+  /* The Modal (background) */
+  .thinkmodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
