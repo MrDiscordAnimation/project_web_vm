@@ -1,6 +1,6 @@
 (function(){
     console.log("This Project was entirely Programmed in JavaScript and HTML and CSS");
-    console.log("Project Name: MDA PC VM V1.0.0\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/")
+    console.log("Project Name: MDA PC VM V1.0.2\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/")
   }())
 var uagent = navigator.userAgent.toLowerCase();
 function onloadKEY(){

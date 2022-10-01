@@ -4,7 +4,7 @@ if ((s).has("100followers")){
 }*/
 (function(){
   console.log("This Project was entirely Programmed in JavaScript and HTML and CSS");
-  console.log("Project Name: MDA PC VM V1.0.0\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/")
+  console.log("Project Name: MDA PC VM V1.0.2\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/")
 }())
 /*const config = {
   "administratordata": "sus"
@@ -116,5 +116,20 @@ function popup(events){
     <p><b>Anonymous</b>: Give me the Exact Details NOW!</p>
     <p><i>Anonymous</i>: WHAT! ARE YOU OUT OF YOUR MIND???? WE CAN'T SHARE THE DETAILS OF THAT!!!!</p>
     `
+  }
+  if (events === "filemanager"){
+    document.getElementById("modalGUI").innerHTML=`
+    <h1>File Manager</h1>
+    <p>
+    File Name | Created Date | Additional Info<br> 
+    <i>settings.exe | 01.01.1992 | System Generated</i><br>
+    <i>sussy_land.lnk | <b style="color: blue;">null</b> | <b style="color: blue;">null</b></i><br>
+    <i>notepad.exe | 01.01.1992 | System Generated</i><br>
+    <i>encryption.mda | <b style="color: blue;">null</b> | The Official Encryption Method using mda files</i><br>
+    <i>decryption.mda | <b style="color: blue;">null</b> | The Official Decryption Method using mda files</i><br>
+    <i>commandline.mda | <b style="color: blue;">null</b> | The Command Line used to execute code</i>
+    </p>
+    `
+    modal.style.display = "block";
   }
 }
