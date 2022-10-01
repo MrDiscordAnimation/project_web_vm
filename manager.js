@@ -120,12 +120,15 @@ function popup(events){
     <h1>File Manager</h1>
     <p>
     File Name | Created Date | Additional Info<br> 
-    <i>settings.exe | 01.01.1992 | System Generated</i><br>
-    <i>sussy_land.lnk | <b style="color: blue;">null</b> | <b style="color: blue;">null</b></i><br>
-    <i>notepad.exe | 01.01.1992 | System Generated</i><br>
+    <i onclick="popup('settings')" class="hype">settings.exe | 01.01.1992 | Settings</i><br>
+    <i onclick="popup('SL_Web')" class="hype">sussy_land.lnk | <b style="color: blue;">null</b> | Sussy Land Shortcut</i><br>
+    <i onclick="popup('notes')" class="hype">notepad.exe | 01.01.1992 | Notes</i><br>
     <i>encryption.mda | <b style="color: blue;">null</b> | The Official Encryption Method using mda files</i><br>
     <i>decryption.mda | <b style="color: blue;">null</b> | The Official Decryption Method using mda files</i><br>
-    <i>commandline.mda | <b style="color: blue;">null</b> | The Command Line used to execute code</i>
+    <i>commandline.mda | <b style="color: blue;">null</b> | The Command Line used to execute code</i><br>
+    <i onclick="popup('audioFolder')" class="hype">audio.exe | 01.01.1992 | Audio Management System</i><br>
+    <i>system.exe | 01.01.1992 | System Controller</i><br>
+    <i onclick="popup('filemanager')" class="hype">filemanager.exe | 01.01.1992 | File Manager</i>
     </p>
     `
     modal.style.display = "block";
@@ -134,6 +137,30 @@ function popup(events){
   else if (events === "launchSL"){
     console.log("%cSussy Land Processor [ADMIN]: Changing Enviroment...","background: pink; color: white;");
     console.log("%cSussy Land Processor [ADMIN]: Fast Load Set to: True","background: pink; color: white;");
+    //Below Code is added to Prevent Tampering
+    console.log("%cSussy Land Processor [ADMIN]: Killed Enviroment. Info Code: 11037","background: pink; color: red;")
+    document.getElementById("errMSG").innerHTML=`
+    <h1>Sussy Land Boot System. Error Code: <i>SL_TemperedFiles</i> Error ID: <i>11037</i></h1>
+    <p>Hi. Our Systems have detected that you (THE USER) are trying to get ahold of Sussy Land: Web Edition. I have so many questions just like why? Like Why? You can play the Game here: <a href="https://mrdiscordanimations.itch.io/">https://mrdiscordanimations.itch.io</a><br><br>
+    Please Listen to the Message Below:<br>
+    <audio controls src="./SL Web Edition Temper.m4a"></audio><br>
+    Captions:
+    <i>
+    This is Mr Discreet Animation.<br>
+    You have been charged of Data Tempering with our Files of Sussy Land: Web Edition.<br>
+    This Message has been Broadcasted to you to the Website of Project Web VM or MDA PC VM or anything that contains PC in the name or something.<br>
+    Anyways, you have been charged of Tempering with our files.<br>
+    Yes, I know that you used F12 and just to do all this Thing.<br>
+    So, please do not try this again because you do not want to hear this Message again or I might as well log your IP Address or do something with it.<br>
+    Yeah, I might as well as ban your IP Address.<br>
+    Thank you for Listening.<br>
+    </i>
+    </p>
+    `;
+    err.style.display="block";
+    console.log("%cSussy Land Processor [ADMIN]: User Tempered Files for Sussy Land: Web Edition","background: pink; color: red;");
+    console.log("%cOh yeah if you're the User who's been tempering our files. I will make sure that your IP will be logged and banned from our Website.","background: black; color: #eee;")
+  
   }
   //Reserved for Audio Player.
   else if (events === "audioFolder"){
