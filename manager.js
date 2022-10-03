@@ -1,7 +1,3 @@
-/*var s = new URLSearchParams(location.search);
-if ((s).has("100followers")){
-  if ((s).get("100followers") === "weibo"){}
-}*/
 (function(){
   const config={"startuptext1":`This Project was entirely Programmed in JavaScript and HTML and CSS`,"startuptext2":`Project Name: MDA PC Revision v1.0.3\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/`,"startuptext3":`You may Modify, Remix or Do anything else `}
   console.log('%cSystem Monitor: Loading Startup Text...\nSystem Monitor: Wrote to Console:\n"','background: black; color: green;')
@@ -11,8 +7,6 @@ if ((s).has("100followers")){
   console.log('%c"\nSystem Monitor: End of Writing to Console.','background: black; color: green;')
   console.log("%cWARNING! PASTING ANY CODE OR OBFUSCATED JavaScript WILL LEAK YOUR CREDENTIALS TO THE HACKER/ATTACKER","background: black; color: red;")
 }())
-//Warning! This Code Below is still under heavy development that allows Third Party Vendors to
-//Config and Change the PNG and other Tools Names
 /*Below is almost the Computer Scripts*/
 //Add Color to JavaScript: https://stackoverflow.com/questions/7505623/colors-in-javascript-console
 /*Example:
@@ -143,7 +137,7 @@ function popup(events){
     <h1>Sussy Land Boot System. Error Code: <i>SL_TemperedFiles</i> Error ID: <i>11037</i></h1>
     <p>Hi. Our Systems have detected that you (THE USER) are trying to get ahold of Sussy Land: Web Edition. I have so many questions just like why? Like Why? You can play the Game here: <a href="https://mrdiscordanimations.itch.io/">https://mrdiscordanimations.itch.io</a><br><br>
     Please Listen to the Message Below:<br>
-    <audio controls src="./SL Web Edition Temper.m4a"></audio><br>
+    <audio controls src="./SL/SL%20Web%20Edition%20Temper.m4a"></audio><br>
     Captions:
     <i>
     This is Mr Discreet Animation.<br>
