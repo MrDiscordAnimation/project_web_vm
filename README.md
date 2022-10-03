@@ -1,6 +1,8 @@
 # project_web_vm
 It's some funny and strange project I made to just simulate a PC Experience.
 You can download or view it here: https://mrdiscordanimation.github.io/project_web_vm/
+## Script Fix Update
+HII! I fixed this Script so it's iPad Friendly Bye!
 ### What does this Project Include?
 It has a Built In Notepad, A Setting App, Project Sussy Land: Web Edition (Coming Soon!) and lastly a Password Protected File or PPF (Password: **sus**)
 ### What can I do in Settings?
