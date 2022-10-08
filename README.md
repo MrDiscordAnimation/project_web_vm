@@ -21,7 +21,6 @@ The reason is I am too lazy to create a Storage File System until Version 2.9.9/
 The Padlock, The Notepad and The File Folder is actually Windows Emojis that I found using the *Windows*+*.* Shortcut
 
 ## Here are the most totally useful things that I am too lazy or it's hard to implement:
-- Storage System
 - The Time and Date Section
 - An Alarm System
 - A Login System
