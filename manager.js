@@ -1,5 +1,5 @@
 (function(){
-  const config={"startuptext1":`This Project was entirely Programmed in JavaScript and HTML and CSS`,"startuptext2":`Project Name: MDA PC Revision v1.0.3\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/`,"startuptext3":`You may Modify, Remix or Do anything else `}
+  const config={"version":"v.1.0.4","startuptext1":`This Project was entirely Programmed in JavaScript and HTML and CSS`,"startuptext2":`Project Name: MDA PC Revision v.1.0.4\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/`,"startuptext3":`You may Modify, Remix or Do anything else `}
   console.log('%cSystem Monitor: Loading Startup Text...\nSystem Monitor: Wrote to Console:\n"','background: black; color: green;')
   console.log("%c"+config.startuptext1,"background: #eee");
   console.log("%c"+config.startuptext2,"background: #eee");
@@ -161,6 +161,19 @@ function popup(events){
     document.getElementById("modalGUI").innerHTML=``;
     modal.style.display = "block";
     console.log("%cSystem Monitor: User Opened Audio Player","background: black; color: green;")
+  }
+  else if (events === "phone"){
+    document.getElementById("phoneWIDE").innerHTML=`
+    <center><br>
+    <p>Phone 📞</p><br>
+    <p>Contact the CIA </p><br>
+    <p>Confidentials Documents 📄</p><br>
+    <p>Photo</p><br>
+    <p onclick="alert('Sorry! There was a problem with our Cameras System. Please Try Again Later or Contact Support if needed.')">Camera</p>
+    </center>
+    `;
+    gui.style.display = "block";
+    console.log("%cSystem Monitor: User Opened Phone","background: black; color: white;")
   }
 //System Code:
   else if (events === "machineCheck"){

@@ -53,6 +53,8 @@
         <p href="#" onclick="popup('pass10918')" style="font-size: 130px; float: left; cursor: default;" title="Password Protected File" id="ppfile">🔒</p>
         <a href="#" onclick="popup('SL_Web')" style="float: right;" title="Sussy Land Web Edition"><img src="./MDATimes.png" alt="mdatimes_icon" name="MDATimes.png" width="120px" height="120px"></a>
         <p href="#" onclick="popup('filemanager')" style="font-size: 130px; float: left; cursor: pointer;" title="File Manager">📂</p>
+        <p href="#" onclick="popup('phone')" style="font-size: 130px; float: right; cursor: pointer;" title="Phone">📱</p>
+        <div id="devBTN"><!--Will Display if you're a Developer--></div>
         </div>
 <!-- The Modal -->
 <div id="thingsModal" class="thinkmodal">
@@ -164,6 +166,56 @@ border: 1px solid #888;
 width: 80%;
 }
 </style>
+<!--WIDE PHONE POPUP-->
+<div id="phoneHEIGHT" class="phonemodal">
+  <div class="phone">
+    <span class="close" onclick="phoneEXIT()">&times;</span>
+    <div id="phoneWIDE"></div>
+</div>
+  </div>
+
+</div>
+<script>
+var gui = document.getElementById("phoneHEIGHT");
+function phoneLOAD() {
+  gui.style.display = "block";
+}
+//This Function is added for Developer Uses Only.
+function phoneEXIT() {
+  gui.style.display = "none";
+}
+</script>
+<style>
+.phonemodal {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.phonemodal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content Ligma DevOnly */
+.phone {
+background-image: url('./mdaosphone.png');
+background-repeat: no-repeat;
+background-color: #eee;
+margin: auto;
+padding: 20px;
+border: 1px solid #888;
+width: 17%;
+height: 65.5%;
+}
+</style>
+<script id="fileSystem" checkSystem="breh.html"></script>
     </body>
 <!--
       DA MDA SIGNATURE g.dev/mda

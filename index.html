@@ -5,27 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDA Virtual PC</title>
+    <script src="./system.js"></script>
+    <script checksystem="index.html" id="fileSystem"></script>
     <style>
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
     </style>
-    <script src="./device_detector_prevention.js"></script>
 </head>
-<body onload="onloadKEY()">
+<body>
     <center>
         <div id="summonFUNCTIONS">
         <h1>MDA PC Virtual Machine</h1>
-        <h3 id="titler">LOADING</h3>
-        <p id="descriptioner">LOADING</p>
-        <p>An Admin of this Project? Login using the Form Below:</p>
-        <form action="https://cdn.mrdiscord.repl.co/project_login" method="post">
-            <p>Email: <input type="email" name="projectEMAIL" id="projectEMAIL" required></p>
-            <p>PassKEY: <input type="number" name="projectRANDKEY" id="projectRANDKEY" maxlength="10" minlength="5" required></p>
-            <input type="reset" value="Reset Credentials">
-            <input type="submit" value="Login">
+        <p>Continue Where you left off.</p>
+        <form>
+        <p>New or Wiping your Data? Enter the Requirements Below:</p>
+            <p>Username: <input type="name" name="username" id="userNAME" required></p>
+            <input type="reset" value="Reset Credentials!" id="resetDATA">
+            <input type="button" value="Create VM!" id="chngeDATA">
         </form>
+        <script>
+            document.getElementById("chngeDATA").onclick=function(){
+                localStorage.DEVUser=document.getElementById("userNAME").value;
+                location.href="./breh.html"
+            }
+            document.getElementById("resetDATA").onclick=function(){
+                var userDEL = document.getElementById("userNAME").value;
+                if (userDEL === localStorage.DEVUser){
+                    var check = confirm("ARE YOU SURE THAT YOU WANT TO NUKE EVERYTHING? OK = YES. CANCEL = NO.");
+                    if (check === true) return nuke();
+                    else alert("Cancelled Request");
+                }
+                else return alert("Enter your Real Username inorder to NUKE!")
+            }
+            function nuke(){
+                localStorage.clear();
+                location.reload()
+            }
+        </script>
+        </div>
+        <div id="devBTN" style="display: none;">
+
         </div>
     </center>
 </body>
@@ -34,7 +55,7 @@ body {
         []    |  _  \    /   / |\  /|     |  ____
         _| . [] |_|  \  /   /  | \/ |  ___|  ___|
                 |_    \/   /   |    | [___] |___|
-    Digital Signature Time2Rise
-    New Signature: 2Slow4DisShit
+    Digital Signature 2Slow4DisShit
+    New Signature: LigmaBallsOrigins
     -->
 </html>
