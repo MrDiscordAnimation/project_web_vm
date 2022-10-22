@@ -5,11 +5,13 @@ You can download or view it here: https://mrdiscordanimation.github.io/project_w
 HII! I fixed this Script so it's iPad Friendly Bye!
 ### What does this Project Include?
 It has a Built In Notepad, A Setting App, Project Sussy Land: Web Edition (Coming Soon!) and lastly a Password Protected File or PPF (Password: **sus**)
+Now in v1.0.4 Nuclear it has: A Fully Functional Login System, A Phone, Developers Tools (Go to: https://mrdiscordanimation.github.io/project_web_vm/xss.js and change "disabled" to "enabled" and paste it in.), Changed Version Name: v1.0.4 -> Nuclear
 ### What can I do in Settings?
 You have 3 Options in Settings which include:
 - Reset to Factory Settings
 - Shut Down
 - Easter Eggs
+- Check OS Name or Version
 #### What does the Easter Eggs button do in Settings?
 Go Ahead and find out for yourself. I'm not spoiling the thing for you.
 #### Why is Sussy Land image shows [MDATimes](https://cdn.mrdiscord.repl.co/mdatimes.html)?
@@ -23,8 +25,6 @@ The Padlock, The Notepad and The File Folder is actually Windows Emojis that I f
 ## Here are the most totally useful things that I am too lazy or it's hard to implement:
 - The Time and Date Section
 - An Alarm System
-- A Login System
-- A Easy to find and Debug JavaScript Console System that I am lazy to implement
 
 # FAQs or Other things
 You can contact me via
