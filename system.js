@@ -38,7 +38,22 @@ function chngeCMD(){
           logger.innerHTML += message + '<br />';
       }
   }
+  console.error = function (message) {
+    if (typeof message == 'object') {
+        logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+    } else {
+        logger.innerHTML += message + '<br />';
+    }
+  }
+    console.info = function (message) {
+      if (typeof message == 'object') {
+          logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+      } else {
+          logger.innerHTML += message + '<br />';
+      }
+  }
 }
+
 function user(){document.getElementById("usernameDisplay").innerText=localStorage.DEVUser;}
 function triggerDEV(){
   document.getElementById("devBTN").innerHTML = `<a href="#" onclick="dev('devtools')" style="float: left;" title="MDA Developer Tools"><img src="./mdadev.png" alt="mdadev" name="mdadev.png"></a>`
@@ -58,6 +73,13 @@ function dev(mda){
   if (mda === "devtools"){
     modan.style.display = "block";
     console.log("%cSystem Monitor: Developer Summoned DevTools","background: black; color: white;");
+  }
+  if (mda === "issueCOMMAND"){
+    console.log("DevTools [ADMIN]: Running Command....");
+    //THANK YOU SO MUCH: https://stackoverflow.com/questions/14014371/how-do-i-convert-a-string-into-an-executable-line-of-code-in-javascript
+    
+    eval(document.getElementById("sendCMD").value)
+    console.log("DevTools [ADMIN]: Script Loaded!")
   }
 }
 //https://stackoverflow.com/questions/17769688/custom-attributes-in-a-script-tag
