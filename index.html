@@ -18,7 +18,7 @@ body {
     <center>
         <div id="summonFUNCTIONS">
         <h1>MDA PC Virtual Machine</h1>
-        <p>Continue Where you left off.</p>
+        <a href="./checkPWD.htm" style="color: black;">Continue Where you left off.</a>
         <form>
         <p>New or Wiping your Data? Enter the Requirements Below:</p>
             <p>Username: <input type="name" name="username" id="userNAME" required></p>
@@ -27,8 +27,9 @@ body {
         </form>
         <script>
             document.getElementById("chngeDATA").onclick=function(){
+                localStorage.DEVPWD="new";
                 localStorage.DEVUser=document.getElementById("userNAME").value;
-                location.href="./breh.html"
+                location.href="./checkPWD.htm"
             }
             document.getElementById("resetDATA").onclick=function(){
                 var userDEL = document.getElementById("userNAME").value;
@@ -55,7 +56,7 @@ body {
         []    |  _  \    /   / |\  /|     |  ____
         _| . [] |_|  \  /   /  | \/ |  ___|  ___|
                 |_    \/   /   |    | [___] |___|
-    Digital Signature 2Slow4DisShit
-    New Signature: LigmaBallsOrigins
+    Digital Signature LigmaBallsOrigins
+    New Signature: TGAAC_LivelyPeople
     -->
 </html>

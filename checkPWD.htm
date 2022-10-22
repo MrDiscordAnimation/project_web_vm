@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>MDA Dashboard</title>
+<link href="https://let-try-it-out.munireachhvitye.repl.co/files/MDAWELCOMEYOU.jpg" rel="icon">
+<!-- Include CSS File Here -->
+<style>
+/* Below line is used for online Google font */
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body{
+overflow: hidden; /* Hide scrollbars. FROM: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+}
+h2{
+background-color: #FEFFED;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+}
+hr{
+margin: 10px -50px;
+border: 0;
+border-top: 1px solid #ccc;
+margin-bottom: 40px;
+}
+div.container{
+width: 900px;
+height: 610px;
+margin:35px auto;
+font-family: 'Raleway', sans-serif;
+}
+div.main{
+width: 300px;
+padding: 10px 50px 25px;
+border: 2px solid gray;
+border-radius: 10px;
+}
+p{
+    font-family: 'Raleway';
+    font-style: normal;
+}
+</style>
+<script>
+function checkALL(){
+document.getElementById("userNAME").innerText=localStorage.DEVUser;
+if (localStorage.DEVPWD==="new") return setup('new');
+if (localStorage.DEVPWD==="false") return setup('redirect');
+if (localStorage.DEVPWD===localStorage.DEVUser){
+    if (localStorage.DEVPWD==="" && localStorage.DEVUser==="" || localStorage.DEVPWD==="undefined" && localStorage.DEVUser==="undefined") return document.getElementById("error").style.display = "block";
+    else return setup("chngePWD");
+}
+else return setup('prompt');
+}
+function setup(policy){
+    if (policy==="new") return document.getElementById("setup").style.display = "block";
+    else if (policy==="redirect") return document.getElementById("passwordless").style.display = "block";
+    else if (policy==="prompt") return document.getElementById("required").style.display = "block";
+    else if (policy==="skip!"){ localStorage.DEVPWD="false"; location.href="./breh.html"; }
+    else if (policy==="login"){
+        if (document.getElementById("mdaCONFIG").value === localStorage.DEVPWD) return location.href="./breh.html";
+        else if (document.getElementById("mdaCONFIG").value === localStorage.DEVREC){ localStorage.DEVPWD = "new"; localStorage.DEVREC = ""; location.reload(); }
+        else return alert("Incorrect Password!");
+    }
+    else if (policy==="complete"){
+        if (document.getElementById("mdaREC").value === ""){
+        localStorage.DEVPWD = document.getElementById("mdaCON").value;
+        location.href="./breh.html" 
+        }
+        else{
+        localStorage.DEVPWD = document.getElementById("mdaCON").value;
+        localStorage.DEVREC = document.getElementById("mdaREC").value;
+        location.href="./breh.html" 
+        }
+    }
+    else if (policy==="chngePWD"){
+        document.getElementById("required").style.display="none"; document.getElementById("error").innerHTML=`<h2>Did you?<br>Just put your Username as the Password?<br>Anyhow. Please click here to Change your Password:<br><a href="#" onclick="localStorage.DEVPWD='new'; location.reload();" style="color: black">RESET PASSWORD</a></h2>`; document.getElementById("error").style.display = "block";
+    }
+}
+</script>
+</head>
+<body onload="checkALL()" id="db"><center>
+<div class="container">
+<div class="main">
+<h2 id="userNAME"><noscript>Sorry, you didn't enabled JavaScript. Our Site/PC uses JavaScript to function!</noscript></h2>
+<div id="setup" style="display: none;">
+<label>Set your Password or PIN. (OPTIONAL)</label>
+<input type="password" name="password" id="mdaCON" required/><br>
+<label>Add a Recovery Password. (OPTIONAL)<br>This Recovery Password is used to Recover your PC incase you accidentally forgot your Original Password!</label>
+<input type="password" name="password" id="mdaREC" required/><br>
+<input type="button" value="Set" onclick="setup('complete')"/><br>
+<input type="button" value="Skip Adding" onclick="setup('skip!')">
+</div>
+<div id="required" style="display: none;">
+<label>Enter your Password or PIN or Recovery Password to continue!</label>
+<input type="password" name="password" id="mdaCONFIG" required/><br>
+<input type="button" value="Login" onclick="setup('login')"/><br>
+</div>
+<div id="passwordless" style="display: none;">
+<h2><a href="./breh.html" style="color: black">Login</a></h2>
+</div>
+
+<div id="error" style="display: none;">
+<h2>Sorry, but something went wrong!<br><a href="./index.html" style="color: black">Click Here to Return</a></h2>
+</div>
+</div>
+</center></body>
+</html>

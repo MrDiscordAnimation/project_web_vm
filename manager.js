@@ -1,5 +1,5 @@
 (function(){
-  const config={"version":"v.1.0.4","startuptext1":`This Project was entirely Programmed in JavaScript and HTML and CSS`,"startuptext2":`Project Name: MDA PC Revision v.1.0.4\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/`,"startuptext3":`You may Modify, Remix or Do anything else `}
+  const config={"version":"v1.0.4 Nuclear","startuptext1":`This Project was entirely Programmed in JavaScript and HTML and CSS`,"startuptext2":`Project Name: MDA PC Revision v1.0.4 Nuclear\nAuthor Name: Mr Discreet Animation#8833\nAuthor Email: mda@amogus.email mrdiscordanimation@gmail.com\nAuthor Website: https://mrdiscordanimations.web.app/`,"startuptext3":`You may Modify, Remix or Do anything else `}
   console.log('%cSystem Monitor: Loading Startup Text...\nSystem Monitor: Wrote to Console:\n"','background: black; color: green;')
   console.log("%c"+config.startuptext1,"background: #eee");
   console.log("%c"+config.startuptext2,"background: #eee");
@@ -27,7 +27,10 @@ function popup(events){
     <hr>
     <h3>System Information</h3>
     <p>
-    Running: <i>MDALigmaOS</i><br>
+    Computer OS: <i>MDALigmaOS</i><br>
+    OS Version: <i>v1.0.4 Nuclear</i><br>
+    Phone OS: <i>MDALinusOS</i><br>
+    OS Version: <i>Early_Build-12</i><br>
     Source Code: <a href="https://github.com/MrDiscordAnimation/project_web_vm" style="color: blue;">github.com/MrDiscordAnimation/project_web_vm</a><br>
 
     </p>
@@ -48,14 +51,17 @@ function popup(events){
     console.log("%cSystem Monitor: User Opened Notes", "background: black; color: green;");
   }
   else if (events === "reset"){
+    var dt = confirm("DO YOU REALLY WANT TO RESET? OK=YES CANCEL=NO")
+    if (dt===true){
     localStorage.clear();
     alert("Resetted this Computer!")
-    window.close();
     console.log("%cSystem Monitor: Initated System Reset!", "background: black; color: red;");
+    location.href="./index.html";
+    } else alert("Good Choice!");
   }
   else if (events === "shutdown"){
-    window.close();
     console.log("%cSystem Monitor: Initated System Shutdown!", "background: black; color: red;");
+    location.href="./index.html";
   }
   else if (events === "pass10918"){
     document.getElementById("modalGUI").innerHTML=`
@@ -122,6 +128,7 @@ function popup(events){
     <i>commandline.mda | <b style="color: blue;">null</b> | The Command Line used to execute code</i><br>
     <i onclick="popup('audioFolder')" class="hype">audio.exe | 01.01.1992 | Audio Management System</i><br>
     <i>system.exe | 01.01.1992 | System Controller</i><br>
+    <i onclick="popup('phone-file')" class="hype">phone.exe | 01.01.1992 | MDA Virtual On-Demand Phone</i><br>
     <i onclick="popup('filemanager')" class="hype">filemanager.exe | 01.01.1992 | File Manager</i>
     </p>
     `
@@ -154,7 +161,24 @@ function popup(events){
     err.style.display="block";
     console.log("%cSussy Land Processor [ADMIN]: User Tempered Files for Sussy Land: Web Edition","background: pink; color: red;");
     console.log("%cOh yeah if you're the User who's been tempering our files. I will make sure that your IP will be logged and banned from our Website.","background: black; color: #eee;")
-  
+  localStorage.banned=true;
+  }
+  else if (events === "dingus-reset"){
+    console.log("%cSystem Anti-Corruption Unit [MDA]: Loaded Reset Protocol. Info Code: 11037","background: pink; color: red;")
+    document.getElementById("errMSG").innerHTML=`
+    <h1>You have been banned. Here are your Options:</h1>
+    <p>
+    <a href="#" style="color: blue;" onclick="popup('reset')">RESET</a><br>
+    OR:
+    <a href="#" style="color: blue;" onclick="popup('reset')">RESET</a><br>
+    OR:
+    <a href="#" style="color: blue;" onclick="popup('reset')">RESET</a><br>
+    Three Options. Take it or Leave it.
+    </p>
+    `;
+    err.style.display="block";
+    console.log("%cA Dev and trying to modify this Code? Read all of your Errors Dingus.","background: black; color: #eee;")
+  localStorage.banned=true;
   }
   //Reserved for Audio Player.
   else if (events === "audioFolder"){
@@ -162,18 +186,40 @@ function popup(events){
     modal.style.display = "block";
     console.log("%cSystem Monitor: User Opened Audio Player","background: black; color: green;")
   }
+  else if (events === "phone-file"){
+    console.log("%cSystem Monitor: User Opened Phone from File Manager","background: black; color: green;")
+    modal.style.display = "none";
+    popup('phone')
+  }
+  else if (events === "mdasusfile-phone"){
+    console.log("%cSystem Monitor: User Opened Confidential Documents from Phone","background: black; color: white;")
+    gui.style.display = "none";
+    popup('pass10918')
+  }
   else if (events === "phone"){
     document.getElementById("phoneWIDE").innerHTML=`
     <center><br>
-    <p>Phone 📞</p><br>
-    <p>Contact the CIA </p><br>
-    <p>Confidentials Documents 📄</p><br>
-    <p>Photo</p><br>
-    <p onclick="alert('Sorry! There was a problem with our Cameras System. Please Try Again Later or Contact Support if needed.')">Camera</p>
+    <p class="hype" onclick="popup('phone-call')">Phone 📞</p><br>
+    <p class="hype" onclick="alert('There was a Connection Problem. While Trying to Contact. Please Try Again Later.')">Contact the CIA </p><br>
+    <p class="hype" onclick="popup('mdasusfile-phone')">Confidentials Documents 📄</p><br>
+    <p class="hype" onclick="alert('Sorry! There was a problem with our Photo System. Please Try Again Later or Contact Support if needed.')">Photo</p><br>
+    <p class="hype" onclick="alert('Sorry! There was a problem with our Cameras System. Please Try Again Later or Contact Support if needed.')">Camera</p>
     </center>
     `;
     gui.style.display = "block";
     console.log("%cSystem Monitor: User Opened Phone","background: black; color: white;")
+  }
+//Phone Calling Event
+  else if (events === "phone-call"){
+    document.getElementById("phoneWIDE").innerHTML=`
+    <center><br>
+    <input type="text" id="sysCALL">
+    <h3 class="hype">CALL</h3>
+    <h3 class="hype" onclick="popup('phone')">Exit</h3>
+    </center>
+    `;
+    gui.style.display = "block";
+    console.log("%cSystem Monitor: User Opened Phone-Call","background: black; color: white;")
   }
 //System Code:
   else if (events === "machineCheck"){

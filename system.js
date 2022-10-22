@@ -15,14 +15,31 @@ function timcook_cookies(){
       if (c.substring(name.length, c.length) === "enabled"){
         console.log("%c🛠 Developer Mode has been Enabled!","background: green; color: white;");
   console.log("%cPlease Wait 5 Seconds as we grant you your Tools","background: green; color: white;")
+  load(chngeCMD, 1000)
+  load(user, 1000)
   load(triggerDEV, 5000)
       }
       else if (c.substring(name.length, c.length) === "disabled"){
         console.log("%c🛠 Developer Mode is still disabled...","background: red; color: white;");
+        load(user, 1000)
       }
+      else return load(user, 1000)
     }
   }
 }
+function chngeCMD(){
+  //Source Code: https://www.codegrepper.com/code-examples/javascript/how+to+console.log+html+element
+  var old = console.log;
+  var logger = document.getElementById('issuer');
+  console.log = function (message) {
+      if (typeof message == 'object') {
+          logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+      } else {
+          logger.innerHTML += message + '<br />';
+      }
+  }
+}
+function user(){document.getElementById("usernameDisplay").innerText=localStorage.DEVUser;}
 function triggerDEV(){
   document.getElementById("devBTN").innerHTML = `<a href="#" onclick="dev('devtools')" style="float: left;" title="MDA Developer Tools"><img src="./mdadev.png" alt="mdadev" name="mdadev.png"></a>`
   console.log("%cLogged In: "+localStorage.DEVUser,"background: green; color: white;")
@@ -39,13 +56,7 @@ function wait(ms) {
 
 function dev(mda){
   if (mda === "devtools"){
-    document.getElementById("modalGUI").innerHTML=`
-    <h1>Developer Tools</h1><br>
-    <hr>
-    <p>Console Command Summoner</p><br>
-    
-    `;
-    modal.style.display = "block";
+    modan.style.display = "block";
     console.log("%cSystem Monitor: Developer Summoned DevTools","background: black; color: white;");
   }
 }
@@ -57,6 +68,7 @@ if (fs === "index.html"){
 }
 else if (fs === "breh.html"){
   console.log("System Monitor: User is in breh.html")
+  if (localStorage.banned==="true") return popup('dingus-reset'); else return;
 }
 else return;
 }
