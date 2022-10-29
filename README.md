@@ -5,7 +5,8 @@ You can download or view it here: https://mrdiscordanimation.github.io/project_w
 HII! I fixed this Script so it's iPad Friendly Bye!
 ### What does this Project Include?
 It has a Built In Notepad, A Setting App, Project Sussy Land: Web Edition (Coming Soon!) and lastly a Password Protected File or PPF (Password: **sus**)
-Now in v1.0.4 Nuclear it has: A Fully Functional Login System, A Phone, Developers Tools (Go to: https://mrdiscordanimation.github.io/project_web_vm/xss.js and change "disabled" to "enabled" and paste it in.), Changed Version Name: v1.0.4 -> Nuclear
+Now in v1.0.4 Nuclear it has: A Fully Functional Login System, A Phone, Developers Tools (Go to: https://mrdiscordanimation.github.io/project_web_vm/xss.js and change "disabled" to "enabled" and paste it in.), Changed Version Name: v1.0.4 -> Nuclear.
+New Updates: Have a Compact Mode. Which almost don't waste your Internet Connection and can be used Offline. 100% Fast Load.
 ### What can I do in Settings?
 You have 3 Options in Settings which include:
 - Reset to Factory Settings
